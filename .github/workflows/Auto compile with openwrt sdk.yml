@@ -178,9 +178,7 @@ jobs:
           echo "CONFIG_ALL_KMODS=n" >> .config
           echo "CONFIG_ALL=n" >> .config
           echo "CONFIG_AUTOREMOVE=n" >> .config
-
           echo "CONFIG_LUCI_LANG_zh_Hans=y" >> .config
-          echo "CONFIG_LUCI_LANG_zh_Hant=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-passwall2=m" >> .config
 
       - name: Compile passwall2 [apk]
@@ -241,7 +239,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-
           - platform: aarch64_generic
             url_sdk: https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/openwrt-sdk-rockchip-armv8_gcc-14.4.0_musl.Linux-x86_64.tar.zst
 
